@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO2 Emission Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        h1 {
+            text-align: center;
+            color: #007BFF;
+            font-size: 25px;
+            margin-bottom: 30px;
+            text-justify: auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>CO2 Emission Predictor</h1>
+        <form id = "predictionForm">
+            <label for="engine_size">Engine Size (L)</label>
+            <input type="text" id="engine_size" name="engine_size" placeholder="Enter engine size" required>
+
+            <label for="cylinders">Cylinders</label>
+            <input type="text" id="cylinders" name="cylinders" placeholder="Enter number of cylinders" required>
+
+            <label for="fuel_city">Fuel Consumption City (L/100 km)</label>
+            <input type="text" id="fuel_city" name="fuel_city" placeholder="Enter city fuel consumption" required>
+
+            <label for="fuel_hwy">Fuel Consumption Hwy (L/100 km)</label>
+            <input type="text" id="fuel_hwy" name="fuel_hwy" placeholder="Enter highway fuel consumption" required>
+
+            <label for="fuel_comb">Fuel Consumption Comb (mpg)</label>
+            <input type="text" id="fuel_comb" name="fuel_comb" placeholder="Enter combined fuel consumption" required>
+
+            <input type="submit" value="Predict CO2 Emission">
+        </form>
+        <div class ="result" id=" result"></div>
+    </div>
+</body>
+</html>
